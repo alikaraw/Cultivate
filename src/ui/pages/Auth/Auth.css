@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*********************
+* ROOT (React scoped)
+**********************/
+.auth-root {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F9EFD4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; /* important change */
+
+    gap: 5vw; /* controlled spacing instead of margin hack */
+}
+
+/*********************
+* CANVAS
+**********************/
+#canvasAuth {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/*********************
+* LEFT SIDE OF LOGIN
+* CARD TECHNICALS
+**********************/
+#containerLogin {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-scene {
+    display: flex;
+    align-items: center;
+    perspective: 1800px;
+    transition: top 0.4s, bottom 0.4s, left 0.4s, right 0.4s;
+}
+
+.card-content {
+    position: relative;
+    transition: transform 0.5s 0.25s;
+    transform-style: preserve-3d;
+}
+
+.card-flipped {
+    transform: rotateY(-180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-content,
+.card-image {
+    width: 22vw;
+    height: 65vh;
+}
+
+.card-image {
+    z-index: -1;
+    position: absolute;
+}
+
+.formContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*********************
+* LEFT SIDE OF LOGIN
+* CARD DESIGN
+**********************/
+h1 {
+    margin: 12% 0 4% 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.error {
+    font-size: 15px;
+    width: 75%;
+    color: darkred;
+    font-weight: bold;
+    text-align: start;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+input {
+    background-color: #fcf7ec;
+    border: #746d5a 2px solid;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 17px;
+    border-radius: 8px;
+    width: 80%;
+    outline: none;
+}
+
+button {
+    background-color: #1f1a0e;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 15px;
+    width: 80%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+a {
+    font-size: 20px;
+    margin-top: 7.5px;
+    font-weight: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+a > span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*********************
+* RIGHT SIDE OF LOGIN
+**********************/
+#containerImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameTitle {
+    width: 37vw;
+}
+
+#gameInfo {
+    width: 27vw;
+}
+
+#gameCharacters {
+    width: 55vw;
+}

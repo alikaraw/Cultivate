@@ -1,0 +1,17 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Optional but recommended */
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* only if your app is always full-screen (game UI) */
+}
+
+/* Safe default */
+* {
+    box-sizing: border-box;
+}
