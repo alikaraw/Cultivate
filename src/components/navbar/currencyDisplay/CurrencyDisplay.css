@@ -1,0 +1,26 @@
+.currency-container {
+    background-color: var(--a-bg1);
+    border-radius: 2rem;
+    padding: 0.6rem;
+    border: var(--a-bg4) 2px solid;
+    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.3);
+    
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.currency-container span {
+    color: var(--text);
+    display: inline-block;
+    font-size: 1.3rem;
+    transform: translateY(1px);
+    padding-right: 0.25rem;
+}
+
+.currency-container img {
+    width: 100%;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+}

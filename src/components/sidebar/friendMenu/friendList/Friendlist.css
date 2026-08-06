@@ -1,0 +1,36 @@
+.friendListWrapper {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.friendListWrapper > p {
+    color: var(--a-bg5);
+    letter-spacing: 0.1rem;
+    width: 100%;
+    align-content: center;
+    text-transform: uppercase;
+}
+
+.friendListSection {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.6rem;
+    gap: 2px;
+}
+
+.friendListWrapper::-webkit-scrollbar {
+    border-radius: 100%;
+    width: 7.5px;
+}
+
+.friendListWrapper::-webkit-scrollbar-track {
+    background: var(--a-bg2);
+}
+
+.friendListWrapper::-webkit-scrollbar-thumb {
+    background: var(--a-bg6);
+    border-radius: 15px;
+}

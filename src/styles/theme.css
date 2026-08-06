@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+@font-face {
+    font-family: "Talina";
+    src: url("./assets/fonts/Talina-DEMO-BF6853ba67600cc.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --overlay: #0000005d;
+
+    --cultivate-red: #E22635;
+    --cultivate-yellow: #FBB315;
+    --cultivate-green: #68B445;
+    --cultivate-blue: #4790CD;
+
+    --bg-darker: #F2AD3E;
+    --bg-dark: #F2E3C3;
+    --bg: #F8EED2;
+    --bg-light: #FDF7E4;
+    --bg-lighter: #f7f4eb;
+
+    --border-darker: #c9972b;
+    --border-dark: #f1daa7;
+    --border: #FAE1B5;
+    --border-light: #EBE0C4;
+
+    --text: #0c0c0c;
+    /* --text: red; */
+
+    --a-bg-1: #f7f4eb;
+    --a-bg0: #F9EFD4;
+    --a-bg1: #e2d7bf;
+    --a-bg2: #cabfa9;
+    --a-bg3: #9b8f7e;
+    --a-bg4: #6c5f53;
+    --a-bg5: #55473e;
+    --a-bg6: #3d2e28;
+    --a-bg7: #322621;
+}
+
+body {
+    font-family: "Talina", "Coiny", sans-serif;
+}

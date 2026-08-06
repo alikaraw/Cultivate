@@ -1,0 +1,111 @@
+/* 
+    GENERAL 
+*/
+.avatarWithXpRing_wrapper {
+    position: relative;
+    width: 105px;
+    height: 105px;
+    margin: 0 1rem;
+}
+
+/*
+    RING & IMAGE
+*/
+.avatarWithXpRing_ringWrapper {
+    position: relative;
+    width: 105px;
+    height: 105px;
+}
+
+.avatarWithXpRing_xpRing {
+    position: absolute;
+    overflow: visible;
+    z-index: 2;
+}
+
+.avatarWithXpRing_border {
+    position: absolute;
+    width: 100px;   
+    z-index: 1;
+}
+
+.avatarWithXpRing_img {
+    position: absolute;
+    border-radius: 50%;
+    height: 90%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/*
+    LEVEL BADGE
+*/
+.avatarWithXpRing_badgeWrapper {
+    position: absolute;
+    width: 100%;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    display: grid;
+    place-items: center;
+}
+
+.avatarWithXpRing_badgeWrapper > * {
+    grid-area: 1 / 1;
+}
+
+.avatarWithXpRing_badgeImage {
+    height: 75%;
+    width: 70px;
+}
+
+.avatarWithXpRing_badgeNumber {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*
+    TOOLTIP
+*/
+.avatarWithXpRing_tooltip {
+    position: absolute;
+    background-color: var(--a-bg-1);
+    padding: 0.5rem 1rem;
+    width: max-content;
+    border-radius: 10px;
+    border: var(--a-bg7) 2px solid;
+    left: 50%;
+    top: 50%;
+    transform: translate(-130%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease;
+    pointer-events: none;
+}
+
+.avatarWithXpRing_ringWrapper:hover .avatarWithXpRing_tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.avatarWithXpRing_tooltip p:first-child {
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    color: var(--cultivate-blue);
+}
+
+.avatarWithXpRing_tooltip P {
+    font-size: 1.05rem;
+    /* font-weight: 900; */
+    text-align: center;
+}

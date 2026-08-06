@@ -21,7 +21,7 @@ lerna-debug.log*
 
 # editor files
 .vscode/
-.idea/
+.ideai/
 
 # OS files
 .DS_Store

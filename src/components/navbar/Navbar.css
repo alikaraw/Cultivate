@@ -1,0 +1,22 @@
+.navbar {
+    padding: 0.75rem 1rem;
+    grid-area: navbar;
+    background-color: var(--a-bg0);
+    display: flex;
+    height: 10%;
+}
+
+.nav-logo {
+    border-right: var(--a-bg4) 2.5px solid;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}

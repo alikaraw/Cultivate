@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Auth from "../ui/pages/Auth/Auth";
+import Auth from "../pages/Auth/Auth";
 
-import MainLayout from "../ui/layouts/MainLayout";
+import MainLayout from "../components/layouts/MainLayout";
 
-import Home from "../ui/pages/Home/Home"
-import Play from "../ui/pages/Play/Play"
-import Profile from "../ui/pages/Profile/Profile"
-import Store from "../ui/pages/Store/Store"
+import Home from "../pages/Home/Home"
+import Play from "../pages/Play/Play"
+import Profile from "../pages/Profile/Profile"
+import Store from "../pages/Store/Store"
 
 export default function AppRouter() {
   return (
@@ -25,7 +25,7 @@ export default function AppRouter() {
           <Route path="/home" element={<Home />} />
           <Route path="/store" element={<Store />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/Play" element={<Play />} />
+          <Route path="/play" element={<Play />} />
         </Route>
       </Routes>
     </BrowserRouter>

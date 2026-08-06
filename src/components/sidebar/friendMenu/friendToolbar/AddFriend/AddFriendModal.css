@@ -1,0 +1,100 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--overlay);
+    z-index: 10;
+}
+
+.modal {
+    position: relative;
+    width: 60rem;
+    height: 45rem;
+    max-height: 80vh;
+    border: var(--a-bg7) 3px solid;
+    border-radius: 25px;
+    background: var(--a-bg1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem 2.5rem;
+    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.modal > span {
+    font-size: 40px;
+    letter-spacing: 0.25rem;
+}
+
+.exitButton {
+    all: unset;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.exitButton > svg {
+    cursor: pointer;
+}
+
+.exitButton:hover svg {
+    color: var(--a-bg4);
+}
+
+.modalInputContainer {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.modalInputContainer > input {
+    border: var(--a-bg6) 3px solid;
+    width: max-content;
+    flex: 1;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    padding: 20px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.modalInputContainer > button {
+    font-family: "Talina", serif;
+    background-color: #1f1a0e;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    letter-spacing: 0.05rem;
+}
+
+.modalContent {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    gap: 3rem;
+}
+
+.modalContent::-webkit-scrollbar {
+    border-radius: 100%;
+    width: 7.5px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+    background: var(--a-bg2);
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+    background: var(--a-bg6);
+    border-radius: 15px;
+}

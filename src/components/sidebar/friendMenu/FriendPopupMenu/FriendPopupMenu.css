@@ -1,0 +1,7 @@
+.FriendPopupMenuWrapper {
+    position: fixed;
+    background: white;
+    padding: 1rem 1.5rem;
+    border: black 2px solid;
+    border-radius: 0.5rem;
+}

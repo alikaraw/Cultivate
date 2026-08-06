@@ -2,9 +2,9 @@ import "./Auth.css";
 
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
-import BackgroundCanvas from "../../components/BackgroundCanvas"
+import BackgroundCanvas from "../../components/ui/BackgroundCanvas"
 
-import { register, login } from "../../../services/authService";
+import { register, login } from "../../services/authService";
 
 export default function Auth() {
   // main state nagigation

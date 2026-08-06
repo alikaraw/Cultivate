@@ -1,0 +1,34 @@
+.profile-container {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--a-bg1);
+    border-bottom: var(--a-bg5) 3px solid;
+}
+
+.profile-information {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.profile-information span {
+    letter-spacing: 0.1rem;
+}
+
+.profileCardUsername {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.profileCardStatus {
+    display: flex;
+    gap: 3px;
+    color: darkgreen;
+}
+
+.profileCardStatus span {
+    line-height: 1;
+    /* font-size: 18px; */
+}

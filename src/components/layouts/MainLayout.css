@@ -1,0 +1,32 @@
+.main-layout {
+    background-color: var(--a-bg2);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 82% 18%;
+}
+
+.main-area {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100vh;
+    border-right: var(--a-bg7) 2px solid;
+}
+
+.main-area > * {
+    border: var(--a-bg3) 2px solid;
+    border-radius: 1.5rem;
+    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*********************
+* CONTENT
+**********************/
+
+.page-content {
+    overflow-y: auto;    
+    background-color: white;
+    flex: 1;
+}

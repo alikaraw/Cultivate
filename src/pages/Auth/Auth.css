@@ -95,7 +95,7 @@
 * LEFT SIDE OF LOGIN
 * CARD DESIGN
 **********************/
-h1 {
+.formContainer h1 {
     margin: 12% 0 4% 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -115,7 +115,7 @@ h1 {
     opacity: 1;
 }
 
-input {
+.formContainer input {
     background-color: #fcf7ec;
     border: #746d5a 2px solid;
     margin: 8px 0;
@@ -126,7 +126,7 @@ input {
     outline: none;
 }
 
-button {
+.formContainer button {
     background-color: #1f1a0e;
     color: #fff;
     font-size: 18px;
@@ -141,7 +141,7 @@ button {
     user-select: none;
 }
 
-a {
+.formContainer a {
     font-size: 20px;
     margin-top: 7.5px;
     font-weight: normal;
@@ -149,7 +149,7 @@ a {
     user-select: none;
 }
 
-a > span {
+.formContainer a > span {
     text-decoration: underline;
     font-weight: bold;
 }

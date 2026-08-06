@@ -1,0 +1,31 @@
+.friendMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem 0.1rem 0.6rem 0.6rem;
+    flex: 1;
+    min-height: 0;
+}
+
+.friendToolbar {
+    height: fit-content;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.6rem;
+    letter-spacing: 0.1rem;
+}
+
+.friendToolBarButtons {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+.friendToolBarButtons button{
+    all: unset;
+    cursor: pointer;
+}
+
+.friendToolBarButtons button:hover {
+    color: var(--a-bg3);
+}

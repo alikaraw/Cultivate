@@ -1,0 +1,51 @@
+.nav-item {
+    color: var(--text);
+    border: #00000000 1px solid;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    
+}
+
+.nav-item:hover:not(.active) {
+    color: var(--text);
+    background-color: var(--a-bg1);
+    transform: scale(1.05);
+} 
+
+.nav-item span {
+    line-height: 1;
+    text-decoration: none;
+    letter-spacing: 0.15rem;
+}
+
+.nav-item svg {
+    vertical-align: middle;
+    font-size: 1.75rem;
+}
+
+.nav-item.active {
+  color: white;
+  transform: scale(1.05);
+}
+
+.variant-red {
+  background-color: var(--cultivate-red);
+}
+
+.variant-yellow {
+  background-color: var(--cultivate-yellow);
+}
+
+.variant-green {
+  background-color: var(--cultivate-green);
+}
+
+.variant-blue {
+  background-color: var(--cultivate-blue);
+}
