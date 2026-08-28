@@ -38,8 +38,10 @@
     --a-bg5: #55473e;
     --a-bg6: #3d2e28;
     --a-bg7: #322621;
+
+    --br: 1.5rem;
 }
 
 body {
-    font-family: "Talina", "Coiny", sans-serif;
+    /* font-family: "Talina", "Coiny", sans-serif; */
 }

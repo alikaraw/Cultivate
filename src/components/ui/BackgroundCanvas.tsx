@@ -29,7 +29,8 @@ export default function BackgroundCanvas() {
     const radius = 3.5;
     const movement = 0.5;
 
-    const colors = ["black", "#504B38", "#F8F3D9"];
+    const colors = ["black", "#504B38", "white"];
+    // const colors = ["black", "#504B38", "#ccc18c"];
     const circles: Circle[] = [];
 
     // distance helper

@@ -1,8 +1,10 @@
 .navbar {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem;
     grid-area: navbar;
     background-color: var(--a-bg0);
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 10%;
 }
 
@@ -11,7 +13,7 @@
     padding-right: 1rem;
     margin-right: 1rem;
     max-width: 100%;
-    height: auto;
+    height: 3rem;
 }
 
 .nav-links {

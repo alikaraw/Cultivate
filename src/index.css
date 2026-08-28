@@ -13,5 +13,11 @@ body {
 
 /* Safe default */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html {
+  /* font-size: clamp(i.8125rem, 0.5rem + 0.5vw, 1rem); */
 }

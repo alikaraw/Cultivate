@@ -2,9 +2,12 @@ import "./Auth.css";
 
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
-import BackgroundCanvas from "../../components/ui/BackgroundCanvas"
-
 import { register, login } from "../../services/authService";
+
+import { MdOutlinePermIdentity, MdOutlineLock , MdOutlineMail } from "react-icons/md";
+import InputField from "./InputField";
+
+import BackgroundCanvas from "../../components/ui/BackgroundCanvas"
 
 export default function Auth() {
   // main state nagigation
@@ -25,7 +28,9 @@ export default function Auth() {
     confirmPassword: ""
   });
 
-  const handleLogin = async () => {
+  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     try {
       const user = await login(email, password);
 
@@ -69,7 +74,9 @@ export default function Auth() {
     return newErrors;
   };
 
-  const handleRegister = async () => {
+  const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     const newErrors = validateRegister();
     setRegisterErrors(newErrors);
 
@@ -99,106 +106,105 @@ export default function Auth() {
   };
 
   return (
-    <div className="auth-root">
-      <div id="containerLogin">
-        <div className="card-scene">
-          <div className={`card-content ${isFlipping ? "" : "card-flipped"}`}>
+    <div className="AuthWrapper">
+      <div className="cardWrapper">
+        <div className="cardScene">
+          <div className={`cardSidesWrapper ${isFlipping ? "" : "cardFlipped"}`}>
             
             {/* FRONT */}
-            <div className="card-front">
-              <img className="card-image" src="/assets/face_card.png" />
-
+            <div className="cardFrontWrapper">
+              <img className="cardImage" src="/assets/images/face_card.png" />
               {isLogin ? (
-                <form className="formContainer">
-                  <h1>Sign In</h1>
-
-                  <input 
-                    type="text"
-                    placeholder="Username" 
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                  <input 
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)} 
+                <form
+                  className="cardContentWrapper"
+                  onSubmit={handleLogin}
+                >
+                  <InputField
+                      title="Username"
+                      placeHolder="Enter your username"
+                      icon={<MdOutlinePermIdentity />}
+                      onChange={setUsername}
+                      error={null}
                   />
 
-                  <button 
-                    type="button"
-                    onClick={handleLogin}>
-                      Sign In
+                  <InputField
+                      title="Password"
+                      placeHolder="Enter your password"
+                      type="password"
+                      icon={<MdOutlineLock />}
+                      onChange={setPassword}
+                      error={null}
+                  />
+
+                  <div className="CardLoginBox">
+                      <input type="checkbox" name="rememberMe" />
+                      <label htmlFor="rememberMe">Remember me</label>
+                      <span>Forgot Password?</span>
+                  </div>
+
+                  <button type="submit" className="confirmButton">
+                      Login
                   </button>
 
-                  <a onClick={flipAndNavigate}>
-                    Don't have an account? <span>Register now</span>
-                  </a>
+                  <div className="FlipCardWrapper" onClick={flipAndNavigate}>
+                      <span>Don't have an account?</span>
+                      <span className="FlipCardHightlight">Register</span>
+                  </div>
                 </form>
               ) : (
-                <form className="formContainer">
-                  <h1>Register</h1>
-                  
-                  <p
-                    className={`error ${registerErrors.username ? "visible" : ""}`}>
-                    {registerErrors.username ? registerErrors.username : "\u00A0"}
-                  </p>
-                  <input 
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)} 
+                <form
+                  className="cardContentWrapper"
+                  onSubmit={handleRegister}
+                >
+                  <InputField
+                      title="Username"
+                      placeHolder="Enter your username"
+                      icon={<MdOutlinePermIdentity />}
+                      onChange={setUsername}
+                      error={registerErrors.username || null}
                   />
 
-                  <p
-                    className={`error ${registerErrors.email ? "visible" : ""}`}>
-                    {registerErrors.email ? registerErrors.email : "\u00A0"}
-                  </p>
-                  <input 
-                    type="email"
-                    placeholder="Email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                  <InputField
+                      title="Email"
+                      placeHolder="Enter your Email"
+                      icon={<MdOutlineMail />}
+                      onChange={setEmail}
+                      error={registerErrors.email || null}
                   />
 
-                  <p
-                    className={`error ${registerErrors.password ? "visible" : ""}`}>
-                    {registerErrors.password ? registerErrors.password : "\u00A0"}
-                  </p>
-                  <input 
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)} 
-                  />
-                  
-                  <p
-                    className={`error ${registerErrors.confirmPassword ? "visible" : ""}`}>
-                    {registerErrors.confirmPassword ? registerErrors.confirmPassword : "\u00A0"}
-                  </p>
-                  <input 
-                    type="password"
-                    placeholder="Confirm Password"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)} 
+                  <InputField
+                      title="Password"
+                      type="password"
+                      placeHolder="Enter your Password"
+                      icon={<MdOutlineLock />}
+                      onChange={setPassword}
+                      error={registerErrors.password || null}
                   />
 
-                  <button 
-                    type="button"
-                    onClick={handleRegister}>
+                  <InputField
+                      title="Confirm Password"
+                      placeHolder="Confirm your password"
+                      type="password"
+                      icon={<MdOutlineLock />}
+                      onChange={setConfirmPassword}
+                      error={registerErrors.confirmPassword || null}
+                  />
+
+                  <button type="submit" className="confirmButton">
                       Register
                   </button>
 
-                  <a onClick={flipAndNavigate}>
-                    Already have an account? <span>Login now</span>
-                  </a>
+                  <div className="FlipCardWrapper" onClick={flipAndNavigate}>
+                      <span>Already have an account?</span>
+                      <span className="FlipCardHightlight">Login</span>
+                  </div>
                 </form>
               )}
             </div>
 
             {/* BACK */}
-            <div className="card-back">
-              <img className="card-image" src="/assets/back_card.png" />
+            <div className="cardBackWrapper">
+              <img className="cardImage" src="/assets/images/back_card.png" />
             </div>
           </div>
         </div>
@@ -206,9 +212,9 @@ export default function Auth() {
 
       {/* RIGHT SIDE IMAGES */}
       <div id="containerImages">
-        <img id="gameTitle" src="/assets/gameTitle.svg" />
-        <img id="gameInfo" src="/assets/gameInfo.svg" />
-        <img id="gameCharacters" src="/assets/gameCharacters.svg" />
+        <img id="gameTitle" src="/assets/images/gameTitle.svg" />
+        <img id="gameInfo" src="/assets/images/gameInfo.svg" />
+        <img id="gameCharacters" src="/assets/images/gameCharacters.svg" />
       </div>
 
       {/* CANVAS */}
