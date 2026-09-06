@@ -22,3 +22,18 @@
     height: 2rem;
     margin-right: 0.5rem;
 }
+
+@media (max-width: 1400px) {
+    .currency-container {
+        padding: 0.55rem 0.7rem;
+    }
+
+    .currency-container span {
+        font-size: 1.1rem;
+    }
+
+    .currency-container img {
+        height: 1.5rem;
+        margin-right: 0.5rem;
+    }
+}

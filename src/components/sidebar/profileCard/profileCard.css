@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
+    min-width: 0;
 }
 
 .profile-information span {
@@ -20,6 +21,8 @@
 .profileCardUsername {
     font-size: 1.25rem;
     line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .profileCardStatus {
@@ -31,4 +34,14 @@
 .profileCardStatus span {
     line-height: 1;
     /* font-size: 18px; */
+}
+
+@media (max-width: 1400px) {
+    .profileCardUsername {
+        font-size: 1.1rem;
+    }
+
+    .profileCardStatus {
+        /* font-size: 1rem; */
+    }
 }
