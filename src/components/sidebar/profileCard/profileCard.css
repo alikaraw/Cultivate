@@ -1,28 +1,29 @@
-.profile-container {
-    height: 15%;
+.profileWrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: var(--a-bg1);
-    border-bottom: var(--a-bg5) 3px solid;
+    padding: 1rem 0 1.3rem 0;
+    flex-shrink: 0;
 }
 
-.profile-information {
+.profileInformation {
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
     min-width: 0;
 }
 
-.profile-information span {
-    letter-spacing: 0.1rem;
+.profileInformation span {
+    /* letter-spacing: 0.1rem; */
 }
 
 .profileCardUsername {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     line-height: 1;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: bold;
 }
 
 .profileCardStatus {
@@ -33,7 +34,8 @@
 
 .profileCardStatus span {
     line-height: 1;
-    /* font-size: 18px; */
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 1400px) {

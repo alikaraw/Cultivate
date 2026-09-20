@@ -8,7 +8,7 @@ import "./Navbar.css"
 
 export default function MainLayout() {
   return (
-    <nav className="navbar">
+    <nav className="navbarWrapper">
         <img className="nav-logo" src="/assets/images/gameTitle.svg" alt="logo"/>
         <ul className="nav-links">
             <NavItem to="/Play" icon={<IoGameController />} label="Play" variant="variant-red" />

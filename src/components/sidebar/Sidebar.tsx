@@ -6,7 +6,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
         <ProfileCard />
-        <FriendMenu />
+        {/* <FriendMenu /> */}
     </aside>
   );
 }

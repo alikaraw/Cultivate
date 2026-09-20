@@ -27,7 +27,13 @@
     --border-light: #EBE0C4;
 
     --text: #0c0c0c;
-    /* --text: red; */
+
+    --font-xs: clamp(0.7rem, 0.6vw, 0.8rem);
+    --font-sm: clamp(0.8rem, 0.7vw, 0.9rem);
+    --font-md: clamp(0.9rem, 0.8vw, 1rem);
+    --font-lg: clamp(1rem, 1vw, 1.25rem);
+    --font-xl: clamp(1.2rem, 1.2vw, 1.5rem);
+    --font-xxl: clamp(1.5rem, 1.6vw, 2rem);
 
     --a-bg-1: #f7f4eb;
     --a-bg0: #F9EFD4;
@@ -39,7 +45,7 @@
     --a-bg6: #3d2e28;
     --a-bg7: #322621;
 
-    --br: 1.5rem;
+    --br: 2rem;
 }
 
 body {

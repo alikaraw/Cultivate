@@ -2,7 +2,7 @@
     GENERAL 
 */
 .avatarWithXpRing_wrapper {
-    --avatar-size: 105px;
+    --avatar-size: 90px;
     position: relative;
     width: var(--avatar-size);
     height: var(--avatar-size);
@@ -112,8 +112,8 @@
 
 @media (max-width: 1400px) {
     .avatarWithXpRing_wrapper {
-        --avatar-size: 75px;
-        margin: 100rem 0.75rem;
+        --avatar-size: 70px;
+        margin: 1rem 0.75rem;
     }
 
     .avatarWithXpRing_badgeImage {

@@ -5,9 +5,9 @@ import "./profileCard.css";
 
 export default function ProfileCard() {
     return (
-        <div className="profile-container">
+        <div className="profileWrapper">
             <AvatarWithXpRing />
-            <div className="profile-information">
+            <div className="profileInformation">
                 <span className="profileCardUsername">GetRektByNoob</span>
                 <div className="profileCardStatus">
                     <FaCircle />
