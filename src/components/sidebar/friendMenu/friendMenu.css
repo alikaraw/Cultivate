@@ -1,24 +1,25 @@
 .friendMenu {
     display: flex;
     flex-direction: column;
-    padding: 0.6rem 0.1rem 0.6rem 0.6rem;
+    padding: clamp(0.2rem, 0.5vw, 0.6rem);
+    padding-right: 0.1rem;
     flex: 1;
     min-height: 0;
 }
 
 .friendToolbar {
-    height: fit-content;
-    font-size: 1.25rem;
+    color: var(--text);
+    font-weight: bold;
+    font-size: var(--font-lg);
     display: flex;
     justify-content: space-between;
-    padding-right: 0.6rem;
-    letter-spacing: 0.1rem;
+    padding: 0.2rem;
 }
 
 .friendToolBarButtons {
-    font-size: 1.5rem;
     display: flex;
-    gap: 10px;
+    font-size: var(--font-xl);
+    gap: 7.5px;
 }
 
 .friendToolBarButtons button{

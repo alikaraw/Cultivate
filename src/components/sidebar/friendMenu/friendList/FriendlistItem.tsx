@@ -4,7 +4,7 @@ type FriendListItemProps = {
     avatar: string;
     username: string;
     status: string;
-    isOnline: boolean;
+    state: string;
     onFriendClick: (
         username: string,
         position: PopupPosition
@@ -16,12 +16,12 @@ export default function FriendlistItem({
     avatar = "/assets/blank_profile1.png",
     username = "Username",
     status = "Status",
-    isOnline = true,
+    state = "online",
     onFriendClick,
 }: FriendListItemProps) {
     return (
         <div 
-            className={"FriendListItemWrapper " + (!isOnline ? "offline" : "")} 
+            className={"FriendListItemWrapper " + state} 
             onClick={(event) => {
                 const rect = event.currentTarget.getBoundingClientRect();
 
@@ -32,8 +32,8 @@ export default function FriendlistItem({
             }}>
             <img src={avatar} alt="Friend Avatar"/>
             <div>
-                <p className="FriendListItem_Username">{username}</p>
-                <p className="FriendListItem_Status">{status}</p>
+                <p className="FriendListItemUsername">{username}</p>
+                <p className="FriendListItemStatus">{status}</p>
             </div>
         </div>
     );

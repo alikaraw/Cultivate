@@ -7,17 +7,18 @@
 }
 
 .friendListWrapper > p {
-    color: var(--a-bg5);
-    letter-spacing: 0.1rem;
-    width: 100%;
+    color: var(--text);
     align-content: center;
     text-transform: uppercase;
+    font-size: var(--font-md);
+    font-weight: bold;
+
 }
 
 .friendListSection {
     display: flex;
     flex-direction: column;
-    padding-right: 0.6rem;
+    padding-right: 0.2rem;
     gap: 2px;
 }
 
@@ -32,5 +33,5 @@
 
 .friendListWrapper::-webkit-scrollbar-thumb {
     background: var(--a-bg6);
-    border-radius: 15px;
+    border-radius: 20rem;
 }

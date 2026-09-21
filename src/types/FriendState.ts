@@ -1,0 +1,1 @@
+export type FriendState = "online" | "ingame" | "offline";

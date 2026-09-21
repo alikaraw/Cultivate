@@ -28,7 +28,6 @@ export default function FriendMenu() {
                 <div className="friendToolBarButtons">
                     <AddFriendButton 
                         onOpen ={() =>  {
-                            console.log("open");
                             setIsAddFriendOpen(true)
                         }}
                     />

@@ -1,37 +1,81 @@
 import type { PopupPosition } from "../../../../types/PopupPosition";
+import type { FriendState } from "../../../../types/FriendState";
 import FriendlistItem from "./FriendlistItem";
-import "./Friendlist.css"
+import "./Friendlist.css";
 
 type FriendListProps = {
-    onFriendClick: (
-        username: string,
-        position: PopupPosition
-    ) => void;
+  onFriendClick: (
+    username: string,
+    position: PopupPosition
+  ) => void;
 };
 
-export default function FriendList({ onFriendClick } : FriendListProps) {
-    return (
-        <div className="friendListWrapper">
-            <p>Online · 0</p>
-            <div className="friendListSection">
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
+const ONLINE_FRIENDS = [
+  "ShadowByte",
+  "VortexRider",
+  "PixelPhantom",
+  "NeonNova",
+  "CyberSlayer",
+  "AstroKnight"
+];
 
-            </div>
+const INGAME_FRIENDS: string[] = [
+  "RiftWalker",
+  "ApexPredator",
+  "ShadowSentry",
+  "HyperionCore",
+  "GhostProtocol",
+  "StarlightVanguard",
+  "BlazeSpecter",
+  "VenomousViper",
+];
 
-            <p>Offline · 0</p>
-            <div className="friendListSection">  
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-                <FriendlistItem onFriendClick={onFriendClick}/>
-            </div>
-        </div>
-    );
+const OFFLINE_FRIENDS = [
+  "IronClaw",
+  "FrostPulse",
+  "QuantumRogue",
+  "ZenithStrike",
+  "Danlash32",
+  "Ronida",
+  "TitanBreaker",
+  "SolarisPrime"
+];
+
+export default function FriendList({ onFriendClick }: FriendListProps) {
+  return (
+    <div className="friendListWrapper">
+      <p>Online · {ONLINE_FRIENDS.length + INGAME_FRIENDS.length}</p>
+      <div className="friendListSection">
+        {ONLINE_FRIENDS.map((username) => (
+          <FriendlistItem
+            onFriendClick={onFriendClick}
+            username={username}
+            status="Online"
+            state={"online"}
+          />
+        ))}
+
+        {INGAME_FRIENDS.map((username) => (
+          <FriendlistItem
+            onFriendClick={onFriendClick}
+            username={username}
+            status="In Game"
+            state={"ingame"}
+          />
+        ))}
+      </div>
+
+      <p>Offline · {OFFLINE_FRIENDS.length}</p>
+      <div className="friendListSection">
+        {OFFLINE_FRIENDS.map((username) => (
+          <FriendlistItem
+            onFriendClick={onFriendClick}
+            username={username}
+            status={"Offline"}
+            state={"offline"}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
